@@ -1,0 +1,10 @@
+server: 
+  port: ${HOSTPOST:8901}
+spring: 
+  application:
+    name: oauth-server
+p10c:
+  security:
+    #忽略以下请求路径，不做拦截
+    ignoreUrls: /apply/download/**,/ureport/*/ureport-asserts/**,/ureport/*/ureport-html/**,/,/ureport/**,/**/*.html,/**/*.css,/**/*.js,/static/**,/theme/**,/plugin/**,/*.ico,/v3/**,/v1/auth/login,/principal,/actuator/**,/druid/**,/v2/api-docs,/webjars/springfox-swagger-ui/**,/swagger-resources/**,/swagger-ui.html
+  version: P5.5
